@@ -1,0 +1,13 @@
+// Fonts
+// Imports the 'Nunito' font from Google Fonts. This ensures that the font is available globally in your stylesheets.
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+// Imports custom variables (such as colors, font sizes, etc.) from the 'variables' file.
+// This file likely contains custom configuration values that can be reused across the project.
+@import 'variables';
+
+// Bootstrap
+// Imports the Bootstrap SCSS framework. Using SCSS allows for customization of Bootstrap's default styles
+// by overriding variables and including only the components you need.
+@import '~bootstrap/scss/bootstrap';

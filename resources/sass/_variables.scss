@@ -1,0 +1,15 @@
+// Body background color
+// Sets the background color of the body to a light grayish shade (#f8fafc).
+$body-bg: #f8fafc;
+
+// Typography settings
+// Sets the default font family to 'Nunito', falling back to a sans-serif font if 'Nunito' is unavailable.
+$font-family-sans-serif: 'Nunito', sans-serif;
+
+// Base font size
+// Defines the base font size for the body text as 0.9rem, making the text slightly smaller than the browser default (typically 1rem).
+$font-size-base: 0.9rem;
+
+// Base line height
+// Sets the default line height to 1.6, improving readability by adding more space between lines of text.
+$line-height-base: 1.6;
