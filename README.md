@@ -37,7 +37,7 @@ Before you begin, ensure you have:
 
    ```bash
    git clone https://github.com/SaidLamghari/Portfolio_Project.git
-   cd anapath-app
+   cd Portfolio_Project
 
 2. **Start the Laravel development server:**
 
