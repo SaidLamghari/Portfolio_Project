@@ -49,7 +49,7 @@ Before you begin, ensure you have:
 * Database: MySQL
 
 ## Contributing
-Contributions are welcome! If you have suggestions for improving the game or adding new features, please fork the repository and submit a pull request. You can also open an issue to discuss your ideas.
+Contributions are welcome! If you have suggestions for improving , please fork the repository and submit a pull request. You can also open an issue to discuss your ideas.
 
 Fork the Project
 - Create your Feature Branch (git checkout -b feature/NewFeature)
