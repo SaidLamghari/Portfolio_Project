@@ -4,7 +4,9 @@
 
 @section('content_header') {{-- Section pour l'en-tête du contenu --}}
 
+
 @stop {{-- Fin de la section d'en-tête --}}
+
 
 @section('content') {{-- Section principale du contenu --}}
     <div class="container"> {{-- Conteneur principal pour le contenu --}}
@@ -18,6 +20,7 @@
                                 <a class="btn btn-success" href="{{ route('PO.index') }}">Retour </a> {{-- Bouton de retour vers l'index des prélèvements --}}
                             </div>
                         </div>
+                        
                         
                         @php
                         $year = substr(date('y'), -2); {{-- Récupère les deux derniers chiffres de l'année actuelle --}}
@@ -46,12 +49,12 @@
                                 {{-- <div class="form-group ">
                                     <label for="Service">Service</label>
                                     <select id="Service" class="form-control" name="Service">
-                                        <option value="">Choose...</option>
-                                        @if (count($services))
-                                            @foreach ($services as $service)
+                                        <option value="">Choose...</option> {{-- Option par défaut --}}
+                                        @if (count($services)) {{-- Vérifie si des services sont disponibles --}}
+                                            @foreach ($services as $service) {{-- Parcourt chaque service --}}
                                                 <option value="{{ $service->id }}" name="Service"
-                                                    {{ old('Service') && old('Service') == $service->id ? 'selected' : '' }}>
-                                                    {{ $service->Nom }}</option> {{-- Affiche les services disponibles --}}
+                                                    {{ old('Service') && old('Service') == $service->id ? 'selected' : '' }}> {{-- Sélectionne l'ancien service si disponible --}}
+                                                    {{ $service->Nom }}</option> {{-- Affiche le nom du service --}}
                                             @endforeach
                                         @endif
                                     </select>
@@ -64,7 +67,7 @@
                                 {{-- <div class="form-group">
                                     <label for="organe">Organe</label>
                                     <input type="text" class="form-control" id="organe" placeholder="Organe"
-                                        name="organe" value="{{ old('organe') }}">
+                                        name="organe" value="{{ old('organe') }}"> {{-- Champ de saisie pour l'organe --}}
                                     @if ($errors->any('organe')) {{-- Vérifie s'il y a des erreurs pour l'organe --}}
                                         <span class="text-danger">{{ $errors->first('organe') }}</span> {{-- Affiche le message d'erreur --}}
                                     @endif
@@ -82,7 +85,7 @@
                                             echo $today; {{-- Définit la valeur par défaut à la date d'aujourd'hui --}}
                                         @endphp>
                                     <div class="input-group-addon"> {{-- Zone pour les icônes ou le texte d'aide --}}
-                                        <span class="glyphicon glyphicon-th"></span>
+                                        <span class="glyphicon glyphicon-th"></span> {{-- Icône pour le sélecteur de date --}}
                                         @if ($errors->any('date')) {{-- Vérifie s'il y a des erreurs pour la date --}}
                                             <span class="text-danger">{{ $errors->first('date') }}</span> {{-- Affiche le message d'erreur --}}
                                         @endif

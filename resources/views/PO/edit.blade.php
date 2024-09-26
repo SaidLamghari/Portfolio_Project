@@ -2,15 +2,12 @@
 
 
 
+
 @section('title', 'Edit Piece Operatoire') {{-- Définit le titre de la page --}}
-
-
-
 
 @section('content_header') {{-- Section pour l'en-tête du contenu --}}
     <h1>Détail prelevement</h1> {{-- Titre principal de la section d'en-tête --}}
 @stop {{-- Fin de la section d'en-tête --}}
-
 
 
 
@@ -25,26 +22,25 @@
                 <label for="numeroAnapath" class="col-sm-2 col-form-label">Numero Anapath</label> {{-- Étiquette pour le champ numéro Anapath --}}
                 <div class="col-sm-10"> {{-- Colonne pour le champ de saisie --}}
                     <input name="NumeroAnapath" type="text" class="form-control" id="numeroAnapath" {{-- Champ de saisie pour le numéro Anapath --}}
-                        value="{{ $prelevement->NumeroAnapath }}" disabled> {{-- Valeur préremplie à partir de l'objet $prelevement --}}
+                        value="{{ $prelevement->NumeroAnapath }}" disabled> {{-- Valeur préremplie à partir de l'objet $prelevement, champ désactivé --}}
                     @if ($errors->any('NumeroAnapath')) {{-- Vérifie s'il y a des erreurs pour ce champ --}}
                         <span class="text-danger">{{ $errors->first('NumeroAnapath') }}</span> {{-- Affiche le message d'erreur --}}
                     @endif
                 </div>
             </div>
-            
-
-
 
             <div class="row mb-3"> {{-- Début d'une rangée pour la description --}}
                 <label for="description" class="col-sm-2 col-form-label">Description</label> {{-- Étiquette pour le champ description --}}
                 <div class="col-sm-10"> {{-- Colonne pour le champ de saisie --}}
-                    <textarea style="height:200px" name="Description" class="form-control" id="description">{{ $prelevement->Description }}</textarea> {{-- Champ de texte pour la description --}}
+                    <textarea style="height:200px" name="Description" class="form-control" id="description">{{ $prelevement->Description }}</textarea> {{-- Champ de texte pour la description, prérempli --}}
                     @if ($errors->any('Description')) {{-- Vérifie s'il y a des erreurs pour ce champ --}}
                         <span class="text-danger">{{ $errors->first('Description') }}</span> {{-- Affiche le message d'erreur --}}
                     @endif
                 </div>
             </div>
 
+
+            
             <div class="row mb-3"> {{-- Début d'une rangée pour le tableau des blocs --}}
                 <table class="table table-striped"> {{-- Table pour afficher les détails des blocs --}}
                     <thead> {{-- En-tête de la table --}}

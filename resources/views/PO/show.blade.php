@@ -2,6 +2,8 @@
 
 @section('title', 'Detail Piece Operatoire') {{-- Définit le titre de la page --}}
 
+
+
 @section('content_header') {{-- Section pour l'en-tête du contenu --}}
     <h1>Détail prelevement</h1> {{-- Titre principal affiché sur la page --}}
 

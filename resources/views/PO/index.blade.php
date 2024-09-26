@@ -2,10 +2,7 @@
 
 @section('title', 'Pieces Operatoires') {{-- Définit le titre de la page --}}
 
-
 @section('content_header') {{-- Section pour l'en-tête du contenu --}}
-
-
 @stop {{-- Fin de la section d'en-tête --}}
 
 @section('content') {{-- Section principale du contenu --}}
@@ -36,6 +33,7 @@
         #edit { color: darkorange; } {{-- Couleur pour l'icône d'édition --}}
         #trash { color: red; } {{-- Couleur pour l'icône de suppression --}}
     </style>
+    
     <div class="container"> {{-- Conteneur principal --}}
         @if ($message = Session::get('success')) {{-- Vérifie si un message de succès est présent --}}
             <div class="alert alert-success"> {{-- Affiche une alerte de succès --}}
@@ -46,6 +44,9 @@
                 <p>{{ $message }}</p> {{-- Affiche le message --}}
             </div>
         @endif
+        
+
+        
         <div class="row justify-content-center"> {{-- Rangée centrée pour le contenu --}}
             <div class="col-md-12"> {{-- Colonne principale --}}
                 <div class="card"> {{-- Carte pour contenir les éléments --}}
@@ -59,8 +60,6 @@
                             @endif
                         </div>
                     </div>
-
-
 
                     <div class="card-body"> {{-- Corps de la carte --}}
                         <div class="table-title"> {{-- Titre de la table --}}
